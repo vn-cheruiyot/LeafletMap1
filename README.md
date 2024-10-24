@@ -1,1 +1,2 @@
-# LeafletMap1
+# LeafletMaps
+ Web map made using Leaflet Js
