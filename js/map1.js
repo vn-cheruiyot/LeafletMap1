@@ -52,7 +52,8 @@ var wms = L.tileLayer.wms("http://localhost:8080/geoserver/wms", {
 //                                   GEOJSON
 // ============================================================================================
  
-
+var point = L.geoJSON(pointsjson);
+var placesJSON = L.geoJSON(places);
 
 var basemaps = {
     "OSM" : osm,
@@ -61,11 +62,10 @@ var basemaps = {
     'Google Street': googleStreets,
     "Google Satellite": googleSat,
 };
-var point = L.geoJSON(pointsjson);
-// var capitals = L.geoJSON(capitalsjson);
+
 
 var layers = {
     "Points" : point,
-    // "Capitals": capitals,
+    "Places": placesJSON,
 };
 L.control.layers(basemaps,layers,{ collapsed: true}).addTo(map);
